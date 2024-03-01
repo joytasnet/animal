@@ -36,10 +36,10 @@ def clear_result():
     l_result['text']=''
 
 #ボタンを押したときの処理
-def btn_click():
+def btn_click(e=None):
     global animal,correct,index
     #入力欄に入っている値を取得
-    user_ans=entry.get()
+    user_ans=entry.get().strip()
     #答えが正しかったら
     if user_ans.lower()==animal.en:
         correct+=1
@@ -91,6 +91,7 @@ cvs.create_image(100,100,image=animal.img,tag="ANI")
 btn=tk.Button(text='答える',font=fnt,command=btn_click)
 #ボタンの配置
 btn.pack()
+root.bind("<space>",btn_click)
 #結果表示ラベルの作成
 l_result=tk.Label(text='',font=('Arial',16))
 #結果表示ラベルの配置
