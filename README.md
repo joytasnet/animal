@@ -2,9 +2,8 @@
 
 ## 起動方法
 
-1. sshをコピー
 2. ダウンロードしたいフォルダに移動
-3. そのフォルダでgit clone xxxxxxxxxxx
+3. そのフォルダでgit clone git@github.com:joytasnet/animal.git
 4. cd でanimalに移動
 5. py main.pyで実行
 
